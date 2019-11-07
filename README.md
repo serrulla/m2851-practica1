@@ -4,7 +4,7 @@
 ## Descripción
 Esta práctica se ha realizado para la asignatura de *Tipología y ciclo de vida de los datos*, perteneciente del Máster en Ciencia de Datos de la Universitat Oberta de Catalunya. Consiste en un proceso que, mediante técnicas de web scraping en lenguaje Python, obtiene un listado de registros en relación a los éxitos musicales desde los 70 hasta la actualidad de la web MusicChartsArchive.
 
-# Miembros del equipo
+## Miembros del equipo
 Esta práctica se ha realizado de manera individual por **Eric Serrulla**
 
 ## Ficheros del código fuente
