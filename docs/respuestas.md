@@ -2,26 +2,29 @@
 # Respuestas
 
 ## 1. Contexto
-La recolección de la información se ha llevado a cabo para la asignatura de Tipología y ciclo de vida de los datos, y servirá como base para estudiar de forma práctica el proceso de captura del dato. Se trata 
-El sitio web escogido ([MusicChartsArchive](http://musicchartsarchive.com/)) contiene la información necesaria ya que ofrece listados situados temporalmente y categorizados.
+La recolección de la información se ha llevado a cabo para la asignatura de Tipología y ciclo de vida de los datos, y servirá como base para estudiar de forma práctica el proceso de captura del dato. Se trata de un listado de éxitos musicales semanales.
+El sitio web escogido ([MusicChartsArchive](http://musicchartsarchive.com/)) contiene la información necesaria ya que ofrece listados situados temporalmente y categorizados. Para obtener la información se han aplicado técnicas de web scraping programadas en Python.
 
 ## 2. Título del dataset
-Listas de éxitos de sencillos musicales a lo largo de las últimas décadas.
+Listas de éxitos de sencillos musicales a lo largo de las últimas 5 décadas.
 ## 3. Descripción
 
-Se incluyen todos los títulos de los diferentes lanzamientos *sencillos* que se encontraron en lista de éxitos durante cada semana desde el año 1979. Cada lista semanal cuenta con 50 registros, los cuales incluyen título, artista, posición y enlace a la ficha de detalles. 
+Se incluyen todos los títulos de los diferentes lanzamientos *sencillos* que se encontraron en lista de éxitos durante cada semana desde el año 1979. Cada lista semanal cuenta con 50 registros, los cuales incluyen título, artista, posición y semana a la cual pertenecen. 
 ## 4. Representación gráfica
 
 ![Muestra de una lista de la revista Billboard (año 1989)](./image.jpg)
+*Muestra de una lista de la revista Billboard (año 1989)*
 
 ## 5. Contenido
+A continuación se listan los diferentes campos que incluye el dataset.
  - **Position**: Valor numérico ordinal que representa la posición del título entre el total de esa semana. Ejemplo: 2. Rango = [0-50]
  - **Title**: Título de la canción. Ejemplo: "Song Title"
  - **Album Artist**: Intérprete de la canción. Ejemplo: "Artist"
- - **Artist**: Intérpretes y colaboradores intérpretes de la canción. Ejemplo: "Artist & Other Artist - Another One Remix". Este campo se creó para diferenciar el artista individual (album_artist), que actúa como identificador único, del artista y posibles colaboradores del trabajo en concreto.
- - **Date**: Fecha que indica (el primer día de) la semana de la lista a la que pertenece el registro. Sirve para situarlas en el tiempo y agruparlas, ya que coincidirán los mismos títulos con diferente fecha y posición.
+ - **Artist**: Intérpretes y colaboradores intérpretes de la canción. Ejemplo: "Artist & Other Artist - Another One Remix". Este campo se creó para diferenciar el artista individual (Album Artist), que actúa como identificador único, del artista y posibles colaboradores del trabajo en concreto.
+ - **Date**: Fecha que indica (el primer día de) la semana de la lista a la que pertenece el registro. Sirve para situarlas en el tiempo y agruparlas, ya que coincidirán los mismos títulos con diferente fecha y posición. El formato es americano (YYYY-MM-DD). Ejemplo: "1996-04-13"
 
-En la tabla original de la que se han recogido cada uno de los elementos de la lista se encuentran los valores de position, title y artist. La fecha se ha extraído del título y de la página, y también figura en la URL. Para separar los campos artist y album_artist se ha tenido en cuenta si en el valor de la celda además del texto simple se diferencia otra etiqueta HTML que sirve de enlace a la página del artista. El enlace predomina sobre el resto del texto, y si solo hay uno de los dos tipos, se utiliza el mismo valor para ambos campos album_artist y artist.
+En la tabla original de la que se han recogido cada uno de los elementos de la lista se encuentran los valores de position, title y artist. La fecha se ha extraído del título y de la página, y también figura en la URL. Para separar los campos Artist y Album Artist se ha tenido en cuenta si en el valor de la celda además del texto simple se diferencia otra etiqueta HTML que sirve de enlace a la página del artista. El enlace predomina sobre el resto del texto, y si solo hay uno de los dos tipos, se utiliza el mismo valor para ambos campos Album Artist y Artist.
+Estos datos no varían en el tiempo, simplemente se generan nuevos registros cada semana.
 
 ## 6. Agradecimientos
 Los datos pertenecen a una base de datos que contiene la web MusicChartsArchive y que, aunque no se ha podido encontrar referencia, se intuye que pueden fundamentarse en las listas de iTunes o Billboard.
@@ -31,6 +34,7 @@ Este conjunto de datos es interesante porque permite conocer y comparar la evolu
 
  - ¿Qué géneros musicales triunfan más?
  - ¿Qué artistas se repiten más?
+ - ¿Qué artista tiene más _números uno_?
  - Relación entre la época del año y el tipo de música en listas
  - Coincidencias o relaciones entre distintos artistas o géneros
 ## 8. Licencia

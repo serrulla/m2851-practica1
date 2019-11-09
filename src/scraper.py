@@ -106,14 +106,13 @@ class ChartsScraper():
         print "Web Scraping of music charts data from " + \
               "'" + self.url + "'..."
 
-        print "This process could take roughly 30 minutes.\n"
+        print "This process could take roughly 1 hour.\n"
 
         # Start timer
         start_time = time.time()
 
         # Download HTML
         html = self.__download_html(self.url)
-        bs = BeautifulSoup(html, 'html.parser')
 
         charts_links = []
 
