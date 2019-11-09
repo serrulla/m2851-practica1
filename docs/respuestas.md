@@ -1,5 +1,5 @@
 
-# Respuestas
+# Dataset: Listas de éxitos de sencillos musicales a lo largo de las últimas 5 décadas.
 
 ## 1. Contexto
 La recolección de la información se ha llevado a cabo para la asignatura de Tipología y ciclo de vida de los datos, y servirá como base para estudiar de forma práctica el proceso de captura del dato. Se trata de un listado de éxitos musicales semanales.
@@ -12,8 +12,8 @@ Listas de éxitos de sencillos musicales a lo largo de las últimas 5 décadas.
 Se incluyen todos los títulos de los diferentes lanzamientos *sencillos* que se encontraron en lista de éxitos durante cada semana desde el año 1979. Cada lista semanal cuenta con 50 registros, los cuales incluyen título, artista, posición y semana a la cual pertenecen. 
 ## 4. Representación gráfica
 
-![Muestra de una lista de la revista Billboard (año 1989)](./image.jpg)
-*Muestra de una lista de la revista Billboard (año 1989)*
+![Muestra de una lista de la revista Billboard (año 1989)](./image.jpg)  
+Figura 1: Muestra de una lista de la revista Billboard (año 1989)
 
 ## 5. Contenido
 A continuación se listan los diferentes campos que incluye el dataset.
